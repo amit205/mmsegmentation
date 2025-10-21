@@ -1,5 +1,5 @@
 matplotlib
-numpy=1.6
+numpy<2.0
 packaging
 prettytable
 scipy
