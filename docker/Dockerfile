@@ -30,8 +30,7 @@ RUN ["/bin/bash", "-c", "mim install mmcv==${MMCV}"]
 
 # Install MMSegmentation
 RUN git clone -b main https://github.com/amit205/mmsegmentation.git /workspace/mmsegmentation
-WORKDIR /mmsegmentation
-RUN git checkout main
+WORKDIR /workspace/mmsegmentation
 ENV FORCE_CUDA="1"
 RUN pip install -r requirements.txt
 RUN pip install --no-cache-dir -e .
